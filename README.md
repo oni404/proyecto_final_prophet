@@ -27,7 +27,7 @@ proyecto/
 │   ├── README.md
 │   └── modelo_prophet_*.pkl       <- Modelos Prophet entrenados (se generan al ejecutar)
 └── evidence/
-
+```
 
 ## 2. Descripción del proyecto
 
