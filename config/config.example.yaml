@@ -1,0 +1,30 @@
+# ==============================================================================
+# Archivo de configuración de EJEMPLO
+# Copiar como "config.yaml" y ajustar valores si se desea, antes de ejecutar
+# src/pipeline.py con --config config/config.yaml
+#
+# Este archivo NO contiene credenciales, tokens ni información sensible.
+# ==============================================================================
+
+# Ruta al dataset de entrada (relativa a la raíz del proyecto)
+ruta_csv: "data/dataset.csv"
+
+# Carpetas de salida
+carpeta_modelos: "models"
+carpeta_evidencia: "evidence"
+
+# Codificación numérica manual de la columna categórica "Distribuidor"
+distribuidor_map:
+  EDEMET: 0
+  EDECHI: 1
+  ENSA: 2
+
+# División train/test para la validación técnica
+anio_corte_test: 2024   # entrenamiento: años <= este valor
+anio_test: 2025         # prueba: año utilizado para calcular MAE / RMSE / MAPE
+
+# Hiperparámetros del modelo Prophet
+prophet:
+  yearly_seasonality: true
+  changepoint_prior_scale: 0.05
+  seasonality_mode: "additive"
